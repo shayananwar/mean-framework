@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= pagedata.title %></title>
+    <link rel='stylesheet' href='/stylesheets/<%= pagedata.style %>' />
+  </head>
+  <body>
+  	<% include templates/header.ejs %> 
+    <h1><%= pagedata.title %></h1>
+    <p>Welcome to <%= pagedata.title %></p>
+    <% include templates/footer.ejs %>
+    <br>
+    <h1>get example</h1>
+    <form action="/name" method="get">
+      <input name="name" value="shayan"/>
+      <input type="submit" name="btnsub" value="go"/>
+    </form>
+    <br>
+    <h1>get example</h1>
+    <form action="/api/users" method="post">
+      <input name="id" value="123"/>
+      <input name="token" value="shayan123"/>
+      <input name="geo" value="12.3 lat 234.3 long"/>
+      <input type="submit" name="btnsub" value="go"/>
+    </form>
+  </body>
+</html>
